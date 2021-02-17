@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2" pull-md="10">
+          <button class="button" style="background-color: white" (click)="backToPageOne()">
+            <img src="assets/image/arrow.png" style="width: 16px;height: 16px">
+          </button>
+        </ion-col>
+        <ion-col style="text-align: left;color: grey">
+          Create Account
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div style="text-align: center; align-content: center">
+  <h6>Enter your details bellow</h6>
+  <div align="center">
+    <ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <button class="button" block  (click)="selectImage()" style="margin-top: 8%; width:60%;height: 36px;background-color: #3a7be0">
+      <p style="color: white;font-size: 16px;margin-top:0px;margin-bottom:0px;font-family: Arial">
+        Select image
+      </p>
+    </button>
+  </div>
+</div>
+  <div>
+    <form [formGroup]="registrationForm" (ngSubmit)="onRegister()">
+      <div style="width: 96%">
+        <ion-item class="rounded" >
+          <ion-input  type="text" required name="name" placeholder="name" formControlName="name"></ion-input>
+        </ion-item>
+      </div>
+
+      <div style="width: 96%">
+        <ion-item class="rounded" >
+          <ion-input type="text" required  name="email" placeholder="email address" formControlName="email"></ion-input>
+        </ion-item>
+      </div>
+
+      <div style="width: 96%">
+        <ion-item class="rounded" >
+          <ion-input type="text" required  name="password" placeholder="password" formControlName="password"></ion-input>
+        </ion-item>
+      </div>
+
+      <div style="width: 96%">
+        <ion-item class="rounded" >
+          <ion-input type="text" required  name="confirmPassword" placeholder="confirm password" formControlName="confirmPassword"></ion-input>
+        </ion-item>
+      </div>
+      <div>
+        <ion-item>
+          <ion-label>Gender</ion-label>
+          <ion-select placeholder="Select One" formControlName="gender">
+            <ion-select-option value="f">Female</ion-select-option>
+            <ion-select-option value="m">Male</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      <div align="left" style="margin-top: 6px;padding-left: 16px">
+        <ion-grid>
+          <ion-row style="height: 20px">
+            <ion-col size="2" pull-md="10">
+              <ion-checkbox color="primary"></ion-checkbox>
+            </ion-col>
+            <ion-col>
+              I Agree to the
+            </ion-col>
+          </ion-row>
+          <ion-row style="height: 8px">
+            <p>Term of service and privacy policy</p>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+      <div align="center">
+        <button class="button" block  (click)="selectImage()" style="margin-top: 8%; width:80%;height: 36px;background-color: #3a7be0">
+          <p style="color: white;font-size: 16px;margin-top:0px;margin-bottom:0px;font-family: Arial">
+            Registration
+          </p>
+        </button>
+      </div>
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div style="text-align: center">
+    <p style="color: blue">Already have an account ?</p>
+  </div>
+</ion-footer>
+

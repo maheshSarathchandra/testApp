@@ -1,0 +1,42 @@
+<ion-header [translucent]="true" style="height: 40%; background-color: blue">
+  <ion-toolbar style="margin-top: 20%">
+      <img src="assets/image/bitzean%20logo%20.png">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <div id="container" style="position: relative">
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <div style="width: 96%">
+        <ion-item class="rounded" >
+          <ion-input  type="text" required name="firstname" placeholder="user name or email address" formControlName="name"></ion-input>
+        </ion-item>
+      </div>
+
+      <div style="width: 96%">
+      <ion-item class="rounded" >
+        <ion-input type="text" required  name="lastname" placeholder="password" formControlName="password"></ion-input>
+      </ion-item>
+      </div>
+
+      <button class="button" block  type="submit" style="padding: 8px;margin-top: 8%; width:80%;height: 42px;background-color: #3a7be0">
+        <p style="color: white">
+          Login
+        </p>
+      </button>
+      <button style=" background-color:white;text-align: center;color: #3a7be0">
+        <P style="color: #3a7be0">
+          forget password ?
+        </P>
+      </button>
+    </form>
+    <button class="button" block  type="submit" style="padding: 8px;margin-top: 8%; width:80%;height: 42px;background-color: #2fdf75">
+      <p style="color: white">
+        Create New Account
+      </p>
+    </button>
+  </div>
+</ion-content>
